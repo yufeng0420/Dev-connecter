@@ -14,7 +14,7 @@ import ProfileGithubRepo from "./ProfileGithubRepo";
 const Profile = ({ match, profile: { profile, loading }, getProfile }) => {
   useEffect(() => {
     getProfile(match.params.id);
-  }, [getProfile]);
+  }, [getProfile, match.params.id]);
   return (
     <Fragment>
       {profile === null || loading ? (
